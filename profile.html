@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InkVERSE</title>
+    <link rel="icon" type="image" href="img/logo.png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="sticky-top pt-2">
+            <div class="m-3 text-center">
+              <img src="img/logo.png" width="100px" height="100px" />
+            </div>
+            <br />
+            <a href="home.html"
+              ><div id="home" class="mx-3 mb-2">
+                <img src="img/3.png" width="25px" height="25px" /> Home
+              </div></a
+            >
+            <a href="profile.html"
+              ><div id="profile1" class="mx-3">
+                <img src="img/7.png" width="23px" height="23px" /> Profile
+              </div></a
+            >
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <a href="posting.html">
+              <div class="text-center">
+                <button class="btn3">New Post</button>
+              </div></a
+            >
+
+            <a href="index.html">
+              <div class="text-center mt-2">
+                <button class="btn3">Logout</button>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="container me-5">
+            <h3 class="fw-bold m-3 profile" style="display: block">Profile</h3>
+
+            <!-- navbar toggler -->
+            <nav class="navbar bg-white shadow fixed-top" style="display: none">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"
+                  ><img
+                    src="img/logo.png"
+                    width="60px"
+                    height="60px"
+                    class="ms-3"
+                /></a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                  aria-controls="offcanvasNavbar"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="offcanvas offcanvas-end"
+                  tabindex="-1"
+                  id="offcanvasNavbar"
+                  aria-labelledby="offcanvasNavbarLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h5
+                      class="offcanvas-title fw-bold"
+                      id="offcanvasNavbarLabel"
+                    >
+                      Menu
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+
+
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active fw-bold"
+                          aria-current="page"
+                          href="home.html"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="nav-link active fw-bold"
+                          aria-current="page"
+                          href="profile.html"
+                          >Profile</a
+                        >
+                      </li>
+                      <li>
+                        <a href="posting.html">
+                          <div class="text-center mt-3">
+                            <button class="btn6">New Post</button>
+                          </div></a
+                        >
+                      </li>
+                      <li>
+                        <a href="index.html">
+                          <div class="text-center mt-2">
+                            <button class="btn6">Logout</button>
+                          </div></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <!--End of side navbar-->
+
+            <!--content-->
+            <h3 class="fw-bold m-3 profile1 pt-5 mt-5" style="display: none">
+              Profile
+            </h3>
+            <hr />
+            <br />
+            <div class="row">
+              <div class="col-7">
+                <img
+                  class="rounded-circle"
+                  src="img/2.png"
+                  width="120px"
+                  height="120px"
+                />
+                <span class="fs-1 fw-bold ms-2 group">Mikey Diaz </span>
+                <p><i class="ms-2">@AdventureSeeker</i></p>
+              </div>
+              <div class="col-5 mt-4 pe-5 text-end">
+                <div class="edit">
+                  <button
+                    style="display: block"
+                    class="btn4 me-3"
+                    data-bs-target="#editprofile"
+                    data-bs-toggle="modal"
+                  >
+                    <img src="img/4.png" width="25px" height="25px" />
+
+                    Edit Profile
+                  </button>
+                </div>
+                <div class="edit1" style="display: none">
+                  <button
+                    class="btn4 me-3"
+                    data-bs-target="#editprofile"
+                    data-bs-toggle="modal"
+                  >
+                    <img src="img/4.png" width="25px" height="25px" />
+                  </button>
+                </div>
+
+
+                <!-- modal edit profile-->
+                <div
+                  class="modal fade"
+                  id="editprofile"
+                  tabindex="-1"
+                  aria-labelledby="editprofile"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5 fw-bold" id="editprofile">
+                          Edit profile
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+
+                      <form action="profile.html">
+                      <div class="modal-body">
+                        <div class="text-center">
+                          <label id="photo" for="file"
+                            >Change Profile Photo</label
+                          >
+                          <input
+                            type="file"
+                            id="file"
+                            name="file"
+                            accept=".jpeg, .png"
+                          />
+                        </div>
+                        <div class="text-start mt-3">
+                          <label for="name" class="mt-2 fw-bold">Name</label>
+                          <input
+                            type="text"
+                            id="name"
+                            class="form-control shadow-lg"
+                            placeholder="Change name"
+                          />
+                        </div>
+                        <div class="text-start mt-4">
+                          <label for="bio" class="mt-2 fw-bold"
+                            >Bio/About me</label
+                          >
+                          <input
+                            type="text"
+                            id="bio"
+                            class="form-control shadow-lg"
+                            placeholder="Change bio/About me"
+                          />
+                          <label for="interest" class="mt-4 fw-bold"
+                            >Interest/Preferred topic</label
+                          >
+                          <textarea
+                            name="interest"
+                            id="interest"
+                            rows="3"
+                            class="shadow-lg ps-3 pt-2"
+                            placeholder="Change interest/Preferred topic"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="modal-footer py-1">                        
+                          <input 
+                              class="btn5" 
+                              type="submit" 
+                              value="Save changes">               
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of modal -->
+              </div>
+
+            
+            </div>
+            <p class="mt-3 pb-3">
+              Exploring the world one adventure at a time. Follow along for
+              travel inspiration and tips! <br />Interests: Travel, Adventure,
+              Outdoor Activities, Photography
+            </p>
+            <div>
+              <span class="pe-3"
+                ><span class="fw-bold">3</span> Blog Posts
+              </span>
+              <span class="pe-3"
+                ><span class="fw-bold">1200</span> Total Likes
+              </span>
+              <span class="pe-3"
+                ><span class="fw-bold">250</span> Total Comments
+              </span>
+            </div>
+            <hr />
+            <br />
+
+            <!--blog 1-->
+            <div>
+              <img
+                src="img/2.png"
+                class="rounded-circle"
+                width="50px"
+                height="50px"
+              />
+              <span class="ms-2">AdventureSeeker</span>
+            </div>
+            <div>
+              <h5 class="fw-bold mt-2">
+                Trekking Through the Himalayas: A Journey to Remember
+              </h5>
+              <div class="fw-medium">
+                <span>Category: Travel, Adventure</span>
+                <p>Date Published: March 18, 2024</p>
+              </div>
+              <p class="text">
+                Embark on an unforgettable journey through the majestic Himalayas as we trek through breathtaking landscapes, towering peaks, and remote villages. Our adventure begins in the bustling city of Kathmandu, where we immerse ourselves in the vibrant culture and ancient history of Nepal. From there, we venture into the heart of the Himalayas, following ancient trails that wind through lush forests, terraced fields, and rugged terrain.
+Along the way, we encounter friendly locals who welcome us into their homes, share stories of their way of life, and offer insights into the rich cultural heritage of the region. We sample delicious 
+              </p>
+            </div>
+            <div>
+              <img src="img/6.png" 
+                width="30px" 
+                height="30px" 
+                class="me-2" />120
+              <img
+                src="img/5.png"
+                width="30px"
+                height="30px"
+                class="ms-5 me-2"
+              />350
+            </div>
+            <br />
+            
+            <!--blog 2-->
+            <div>
+              <img
+                src="img/2.png"
+                class="rounded-circle"
+                width="50px"
+                height="50px"
+              />
+              <span class="ms-2">AdventureSeeker</span>
+            </div>
+            <div>
+              <h5 class="fw-bold mt-2">
+                Camping Under the Stars: Finding Serenity in Nature
+              </h5>
+              <div class="fw-medium">
+                <span>Category:  Travel, Outdoor Activities</span>
+                <p>Date Published: March 14, 2024</p>
+              </div>
+              <p class="text">
+                Escape the hustle and bustle of city life and reconnect with nature on a camping adventure under the stars. Set up camp in pristine wilderness areas, surrounded by towering trees, babbling brooks, and breathtaking vistas. Spend your days hiking scenic trails that wind through old-growth forests, swimming in crystal-clear lakes, and spotting wildlife in their natural habitat. Feel the rush of adrenaline as you navigate whitewater rapids or soar through the treetops on a thrilling zipline adventure.
+As night falls, gather around the campfire to roast marshmallows, share stories, and marvel at the brilliance of the starry sky above. Far from the bright lights of the city, the Milky Way stretches across...
+            </div>
+            <div>
+              <img src="img/6.png" 
+                width="30px" 
+                height="30px"
+                class="me-2" />30
+              <img
+                src="img/5.png"
+                width="30px"
+                height="30px"
+                class="ms-5 me-2"
+              />612
+            </div>
+            <br />
+
+            <!--blog 3-->
+            <div>
+              <img
+                src="img/2.png"
+                class="rounded-circle"
+                width="50px"
+                height="50px"
+              />
+              <span class="ms-2">AdventureSeeker</span>
+            </div>
+            <div>
+              <h5 class="fw-bold mt-2">
+                Capturing the Beauty of Wildlife: A Photographer's Journey              </h5>
+              <div class="fw-medium">
+                <span>Category: Photography, Nature</span>
+                <p>Date Published: February 29, 2024</p>
+              </div>
+              <p class="text">
+                Join award-winning wildlife photographer Sarah Smith as she shares her adventures in capturing the beauty of wildlife around the world. From the majestic lions of the African savanna to the elusive snow leopards of the Himalayas, Sarah takes readers on a visual journey through some of the planet's most awe-inspiring landscapes and ecosystems.
+                Through stunning images and captivating stories, Sarah offers a behind-the-scenes look at the challenges and rewards of wildlife photography. From patiently waiting for hours in a hidden blind to tracking elusive species through dense jungle, every photograph tells a story of determination, perseverance, and passion for the natural world.            </div>
+            <div>
+              <img src="img/6.png" 
+                width="30px" 
+                height="30px" 
+                class="me-2" 
+                />100
+              <img
+                src="img/5.png"
+                width="30px"
+                height="30px"
+                class="ms-5 me-2"
+              />238
+            </div>
+            <br />
+
+          </div>
+          <!-- end of container -->
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
